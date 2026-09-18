@@ -35,28 +35,36 @@ const players = {
 "julian-alvarez": {name:"Julián Alvarez", country:"Argentine", club:"Atlético de Madrid", position:"Attaquant", value:"120 M€", age:"26 ans", img:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Julian_Alvarez_Argentina_v_Spain_19_July_2026-146.jpg", source:"https://commons.wikimedia.org/wiki/File:Julian_Alvarez_Argentina_v_Spain_19_July_2026-146.jpg"},
 "declan-rice": {name:"Declan Rice", country:"Angleterre", club:"Arsenal", position:"Milieu", value:"120 M€", age:"27 ans", img:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Declan_Rice_England_v_Ghana_23_June_2026-143.jpg", source:"https://commons.wikimedia.org/wiki/File:Declan_Rice_England_v_Ghana_23_June_2026-143.jpg"},
 "ayoub-bouaddi": {name:"Ayyoub Bouaddi", country:"Maroc", club:"Manchester City", position:"Milieu", value:"Nouveau transfert", age:"18 ans", img:"", source:"https://www.cafonline.com/afcon2025/news/bouaddi-s-rise-continues-as-morocco-youngster-lands-manchester-city-transfer/"},
-"yan-diomande": {name:"Yan Diomande", country:"Côte d’Ivoire", club:"Real Madrid", position:"Ailier", value:"Nouveau transfert", age:"", img:"", source:"https://www.cafonline.com/afcon2025/news/seven-african-stars-who-earned-big-moves-after-2026-world-cup-heroics/"},
-"ismael-saibari": {name:"Ismael Saibari", country:"Maroc", club:"Bayern Munich", position:"Milieu", value:"Nouveau transfert", age:"", img:"", source:"https://www.cafonline.com/afcon2025/news/seven-african-stars-who-earned-big-moves-after-2026-world-cup-heroics/"},
-"caleb-yirenkyi": {name:"Caleb Yirenkyi", country:"Ghana", club:"Coventry City", position:"Milieu", value:"Nouveau transfert", age:"", img:"", source:"https://www.cafonline.com/afcon2025/news/seven-african-stars-who-earned-big-moves-after-2026-world-cup-heroics/"},
+"yan-diomande": {name:"Yan Diomande", country:"Côte d’Ivoire", club:"Real Madrid", position:"Attaquant", value:"Transfert confirmé", age:"19 ans", img:"", source:"https://www.cafonline.com/afcon2025/news/seven-african-stars-who-earned-big-moves-after-2026-world-cup-heroics/"},
+"ismael-saibari": {name:"Ismael Saibari", country:"Maroc", club:"Bayern Munich", position:"Milieu offensif", value:"Transfert confirmé", age:"25 ans", img:"", source:"https://www.cafonline.com/afcon2025/news/seven-african-stars-who-earned-big-moves-after-2026-world-cup-heroics/"},
+"caleb-yirenkyi": {name:"Caleb Yirenkyi", country:"Ghana", club:"Coventry City", position:"Milieu", value:"Transfert confirmé", age:"20 ans", img:"", source:"https://www.cafonline.com/afcon2025/news/seven-african-stars-who-earned-big-moves-after-2026-world-cup-heroics/"},
 "teboho-mokoena": {name:"Teboho Mokoena", country:"Afrique du Sud", club:"Mamelodi Sundowns", position:"Milieu", value:"À suivre", age:"29 ans", img:"https://sundownsfc.co.za/wp-content/uploads/2023/12/Mokoena.jpg", source:"https://sundownsfc.co.za/player/teboho-mokoena/"},
 "jadon-sancho": {name:"Jadon Sancho", country:"Angleterre", club:"Joueur libre", position:"Ailier", value:"LIBRE", age:"26 ans", img:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Jadon_Sancho_20042025_(1).jpg", source:"https://commons.wikimedia.org/wiki/File:Jadon_Sancho_20042025_(1).jpg"},
-"casemiro": {name:"Casemiro", country:"Brésil", club:"Joueur libre", position:"Milieu", value:"LIBRE", age:"34 ans", img:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Casemiro_Brazil_V_Morocco_13_June_2026-76_(cropped).jpg", source:"https://commons.wikimedia.org/wiki/File:Casemiro_Brazil_V_Morocco_13_June_2026-76_(cropped).jpg"},
-"bernardo-silva": {name:"Bernardo Silva", country:"Portugal", club:"Joueur libre", position:"Milieu", value:"LIBRE", age:"32 ans", img:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Bernardo_Silva.jpg", source:"https://commons.wikimedia.org/wiki/File:Bernardo_Silva.jpg"}
+"casemiro": {name:"Casemiro", country:"Brésil", club:"Inter Miami", position:"Milieu", value:"Sous contrat", age:"34 ans", img:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Casemiro_Brazil_V_Morocco_13_June_2026-76_(cropped).jpg", source:"https://commons.wikimedia.org/wiki/File:Casemiro_Brazil_V_Morocco_13_June_2026-76_(cropped).jpg"},
+"bernardo-silva": {name:"Bernardo Silva", country:"Portugal", club:"Real Madrid", position:"Milieu", value:"Sous contrat", age:"32 ans", img:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Bernardo_Silva.jpg", source:"https://commons.wikimedia.org/wiki/File:Bernardo_Silva.jpg"}
 };
 const key = new URLSearchParams(location.search).get("player") || "lamine-yamal";
 const p = players[key] || players["lamine-yamal"];
 const stats = {
-"lamine-yamal": ["2025/26","28","16","11","2 262"],
-"erling-haaland": ["2025/26","35","27","8","2 953"],
-"kylian-mbappe": ["2025/26","31","25","5","2 599"]
+"lamine-yamal": ["2026/27 · au 17 sept.","7","8","4","581"],
+"erling-haaland": ["2026/27 · au 17 sept.","8","8","0","697"],
+"kylian-mbappe": ["2026/27 · au 17 sept.","7","8","2","629"],
+"yan-diomande": ["2026/27 · au 17 sept.","7","0","1","255"],
+"ismael-saibari": ["2026/27 · au 17 sept.","3","0","3","—"],
+"caleb-yirenkyi": ["2026/27 · au 17 sept.","4","0","0","177"],
+"teboho-mokoena": ["2026/27 · au 12 sept.","5","2","0","405"]
 };
 const careers = {
 "lamine-yamal":["FC Barcelona","La Masia","Débuts professionnels : 2023"],
 "erling-haaland":["Manchester City","Borussia Dortmund","RB Salzburg","Molde"],
-"kylian-mbappe":["Real Madrid","Paris Saint-Germain","AS Monaco"]
+"kylian-mbappe":["Real Madrid","Paris Saint-Germain","AS Monaco"],
+"yan-diomande":["Real Madrid (2026-)","RB Leipzig (2025-2026)","Leganés (2024-2025)"],
+"ismael-saibari":["Bayern Munich (2026-)","PSV Eindhoven","PSV Jong"],
+"caleb-yirenkyi":["Coventry City (2026-)","Nordsjælland (2024-2026)"],
+"teboho-mokoena":["Mamelodi Sundowns (2022-)","SuperSport United"]
 };
 document.title = "Kairo Sport | " + p.name;
-document.getElementById("profile").innerHTML = '<div class="player-profile-photo"><img src="'+p.img+'" alt="Photo de '+p.name+'"></div><div class="player-profile-copy"><span class="tag">FICHE JOUEUR</span><h1>'+p.name+'</h1><p>'+p.position+' · '+p.club+'</p><strong>'+p.value+'</strong><a class="photo-credit" href="'+p.source+'" target="_blank" rel="noopener">Voir la source de la photo →</a></div>';
+document.getElementById("profile").innerHTML = '<div class="player-profile-photo">'+(p.img ? '<img src="'+p.img+'" alt="Photo de '+p.name+'">':'<span class="player-avatar-fallback">'+p.name.split(" ").map(x=>x[0]).slice(0,2).join("")+'</span>')+'</div><div class="player-profile-copy"><span class="tag">FICHE JOUEUR</span><h1>'+p.name+'</h1><p>'+p.position+' · '+p.club+'</p><strong>'+p.value+'</strong><a class="photo-credit" href="'+p.source+'" target="_blank" rel="noopener">Voir la source de la photo →</a></div>';
 const s = stats[key];
 document.getElementById("stats").innerHTML = s ? '<div><span>Saison</span><strong>'+s[0]+'</strong></div><div><span>Matchs</span><strong>'+s[1]+'</strong></div><div><span>Buts</span><strong>'+s[2]+'</strong></div><div><span>Passes décisives</span><strong>'+s[3]+'</strong></div><div><span>Minutes</span><strong>'+s[4]+'</strong></div>' : '<div class="stats-empty">Statistiques détaillées en cours de mise à jour pour ce joueur.</div>';
 const career = careers[key] || [p.club];
