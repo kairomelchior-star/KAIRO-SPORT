@@ -88,8 +88,70 @@
   <section class="dark-section">
     <div class="container section">
       <div class="section-head light">
-        <div><span class="eyebrow">JOUEURS & VALEURS</span><h2>Les joueurs les plus valorisés du marché</h2></div>
+        <div><span class="eyebrow">MERCATO 2026</span><h2>Le marché des joueurs</h2></div>
       </div>
+      <div class="market-tabs" role="tablist" aria-label="Filtres du marché">
+        <button class="market-tab active" data-filter="all">Tous</button>
+        <button class="market-tab" data-filter="value">💰 Valeurs</button>
+        <button class="market-tab" data-filter="free">🆓 Libres</button>
+        <button class="market-tab" data-filter="africa">🌍 Afrique</button>
+        <button class="market-tab" data-filter="young">⭐ Jeunes</button>
+      </div>
+      <div class="market-search">
+        <input id="playerSearch" type="search" placeholder="Rechercher un joueur, un club ou un pays..." aria-label="Rechercher un joueur">
+      </div>
+      <p class="market-intro">La <strong>valeur marchande</strong> est une estimation de marché : elle ne correspond pas automatiquement au prix demandé par le club ni au montant réel d'un transfert.</p>
+      <div class="player-market-grid" id="playerMarket">
+        <article class="player-market-card market-player" data-tags="value young" data-search="Lamine Yamal Barcelona Espagne ailier"><div class="player-avatar">LY</div><div><span class="player-position">Ailier · FC Barcelona</span><h3>Lamine Yamal</h3><strong>220 M€</strong><small>19 ans · Espagne</small></div></article>
+        <article class="player-market-card market-player" data-tags="value" data-search="Erling Haaland Manchester City Norvège attaquant"><div class="player-avatar">EH</div><div><span class="player-position">Attaquant · Manchester City</span><h3>Erling Haaland</h3><strong>220 M€</strong><small>26 ans · Norvège</small></div></article>
+        <article class="player-market-card market-player" data-tags="value" data-search="Kylian Mbappe Real Madrid France attaquant"><div class="player-avatar">KM</div><div><span class="player-position">Attaquant · Real Madrid</span><h3>Kylian Mbappé</h3><strong>200 M€</strong><small>27 ans · France</small></div></article>
+        <article class="player-market-card market-player" data-tags="value" data-search="Michael Olise Bayern France ailier"><div class="player-avatar">MO</div><div><span class="player-position">Ailier · Bayern Munich</span><h3>Michael Olise</h3><strong>170 M€</strong><small>24 ans · France</small></div></article>
+        <article class="player-market-card market-player" data-tags="value young" data-search="Jude Bellingham Real Madrid Angleterre milieu"><div class="player-avatar">JB</div><div><span class="player-position">Milieu · Real Madrid</span><h3>Jude Bellingham</h3><strong>160 M€</strong><small>23 ans · Angleterre</small></div></article>
+        <article class="player-market-card market-player" data-tags="value young" data-search="Pedri Barcelona Espagne milieu"><div class="player-avatar">P</div><div><span class="player-position">Milieu · FC Barcelona</span><h3>Pedri</h3><strong>150 M€</strong><small>23 ans · Espagne</small></div></article>
+        <article class="player-market-card market-player" data-tags="value" data-search="Vinicius Junior Real Madrid Brésil ailier"><div class="player-avatar">VJ</div><div><span class="player-position">Ailier · Real Madrid</span><h3>Vinícius Júnior</h3><strong>140 M€</strong><small>26 ans · Brésil</small></div></article>
+        <article class="player-market-card market-player" data-tags="value" data-search="Vitinha PSG Portugal milieu"><div class="player-avatar">V</div><div><span class="player-position">Milieu · Paris Saint-Germain</span><h3>Vitinha</h3><strong>140 M€</strong><small>26 ans · Portugal</small></div></article>
+        <article class="player-market-card market-player" data-tags="value young" data-search="Joao Neves PSG Portugal milieu"><div class="player-avatar">JN</div><div><span class="player-position">Milieu · Paris Saint-Germain</span><h3>João Neves</h3><strong>140 M€</strong><small>21 ans · Portugal</small></div></article>
+        <article class="player-market-card market-player" data-tags="value" data-search="Khvicha Kvaratskhelia PSG Géorgie ailier"><div class="player-avatar">GK</div><div><span class="player-position">Ailier · Paris Saint-Germain</span><h3>Khvicha Kvaratskhelia</h3><strong>140 M€</strong><small>25 ans · Géorgie</small></div></article>
+        <article class="player-market-card market-player" data-tags="value" data-search="Julian Alvarez Atletico Argentine attaquant"><div class="player-avatar">JA</div><div><span class="player-position">Attaquant · Atlético de Madrid</span><h3>Julián Alvarez</h3><strong>120 M€</strong><small>26 ans · Argentine</small></div></article>
+        <article class="player-market-card market-player" data-tags="value" data-search="Declan Rice Arsenal Angleterre milieu"><div class="player-avatar">DR</div><div><span class="player-position">Milieu · Arsenal</span><h3>Declan Rice</h3><strong>120 M€</strong><small>27 ans · Angleterre</small></div></article>
+        <article class="player-market-card market-player" data-tags="africa young" data-search="Teboho Mokoena Mamelodi Sundowns Afrique du Sud milieu"><div class="player-avatar">TM</div><div><span class="player-position">Milieu · Mamelodi Sundowns</span><h3>Teboho Mokoena</h3><strong>À suivre</strong><small>Afrique du Sud · talent africain</small></div></article>
+        <article class="player-market-card market-player" data-tags="free" data-search="Jadon Sancho joueur libre Angleterre"><div class="player-avatar">JS</div><div><span class="player-position">Ailier · Joueur libre</span><h3>Jadon Sancho</h3><strong>LIBRE</strong><small>Angleterre · statut 2026</small></div></article>
+        <article class="player-market-card market-player" data-tags="free" data-search="Casemiro joueur libre Brésil milieu"><div class="player-avatar">C</div><div><span class="player-position">Milieu · Joueur libre</span><h3>Casemiro</h3><strong>LIBRE</strong><small>Brésil · statut 2026</small></div></article>
+        <article class="player-market-card market-player" data-tags="free" data-search="Bernardo Silva joueur libre Portugal milieu"><div class="player-avatar">BS</div><div><span class="player-position">Milieu · Joueur libre</span><h3>Bernardo Silva</h3><strong>LIBRE</strong><small>Portugal · statut 2026</small></div></article>
+      </div>
+      <div id="noPlayers" class="no-players" hidden>Aucun joueur ne correspond à ta recherche.</div>
+      <div class="market-note">Les valeurs marchandes sont indicatives. Les statuts de joueurs libres sont présentés comme des informations de mercato 2026 et doivent être actualisés au fil des nouvelles signatures.</div>
+    </div>
+  </section>
+
+  <section class="container section">
+    <div class="section-head"><div><span class="eyebrow">GROS MOUVEMENTS</span><h2>Les opérations marquantes de 2026</h2></div></div>
+    <div class="transfer-table-wrap">
+      <table class="transfer-table">
+        <thead><tr><th>Joueur</th><th>De</th><th>Vers</th><th>Montant annoncé</th></tr></thead>
+        <tbody>
+          <tr><td>Morgan Rogers</td><td>Aston Villa</td><td>Chelsea</td><td>£117 M</td></tr>
+          <tr><td>Enzo Fernández</td><td>Chelsea</td><td>Manchester City</td><td>£125 M</td></tr>
+          <tr><td>Elliot Anderson</td><td>Nottingham Forest</td><td>Manchester City</td><td>£116 M</td></tr>
+          <tr><td>Sandro Tonali</td><td>Newcastle</td><td>Tottenham</td><td>£100 M</td></tr>
+          <tr><td>Bradley Barcola</td><td>Paris Saint-Germain</td><td>—</td><td>£123 M*</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note">*Les montants et opérations peuvent inclure des bonus et être présentés différemment selon les sources. Les chiffres ci-dessus reprennent le suivi du mercato 2026 publié par Sky Sports.</p>
+  </section>
+
+  <section class="dark-section">
+    <div class="container section">
+      <div class="section-head light"><div><span class="eyebrow">SUIVI KAIRO SPORT</span><h2>Ce que nous suivons pour chaque joueur</h2></div></div>
+      <div class="transfer-process">
+        <div><b>01</b><h3>Valeur</h3><p>Estimation de marché et évolution quand une donnée fiable est disponible.</p></div>
+        <div><b>02</b><h3>Statut</h3><p>Contrat, joueur libre, prêt, transfert définitif ou intérêt rapporté.</p></div>
+        <div><b>03</b><h3>Mouvement</h3><p>Club précédent, nouveau club, championnat et montant annoncé.</p></div>
+        <div><b>04</b><h3>Afrique</h3><p>Une attention particulière aux joueurs africains et aux passerelles vers l'Europe, l'Asie et le Golfe.</p></div>
+      </div>
+    </div>
+  </section>
       <p class="market-intro">Voici un premier tableau des grandes valeurs du marché. La <strong>valeur marchande est une estimation</strong> : elle ne correspond pas automatiquement au prix demandé par le club ni au montant réel d'un transfert.</p>
       <div class="player-market-grid">
         <article class="player-market-card"><div class="player-avatar">LY</div><div><span class="player-position">Ailier droit · FC Barcelona</span><h3>Lamine Yamal</h3><strong>220 M€</strong><small>19 ans · Espagne</small></div></article>
@@ -128,5 +190,33 @@
   </div>
   <div class="copyright">© <span id="year">2026</span> Kairo Sport. Tous droits réservés.</div>
 </footer>
+<script>
+const tabs = document.querySelectorAll('.market-tab');
+const players = document.querySelectorAll('.market-player');
+const search = document.getElementById('playerSearch');
+const empty = document.getElementById('noPlayers');
+let activeFilter = 'all';
+function filterPlayers(){
+  const query = (search.value || '').toLowerCase().trim();
+  let visible = 0;
+  players.forEach(card => {
+    const tags = card.dataset.tags.split(' ');
+    const haystack = (card.dataset.search + ' ' + card.textContent).toLowerCase();
+    const matchesFilter = activeFilter === 'all' || tags.includes(activeFilter);
+    const matchesSearch = !query || haystack.includes(query);
+    const show = matchesFilter && matchesSearch;
+    card.style.display = show ? '' : 'none';
+    if(show) visible++;
+  });
+  empty.hidden = visible !== 0;
+}
+tabs.forEach(tab => tab.addEventListener('click', () => {
+  tabs.forEach(t => t.classList.remove('active'));
+  tab.classList.add('active');
+  activeFilter = tab.dataset.filter;
+  filterPlayers();
+}));
+search.addEventListener('input', filterPlayers);
+</script>
 </body>
 </html>
