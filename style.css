@@ -70,3 +70,14 @@ footer{background:#06100b;color:#c8d2cc;padding-top:50px}.footer-grid{display:gr
 .profile-card span{display:block;color:#7b8881;font-size:11px;text-transform:uppercase;margin-bottom:7px}
 .profile-card strong{font-size:18px}
 @media(max-width:700px){.player-profile-hero .container{grid-template-columns:1fr}.player-profile-photo{height:300px}.player-profile-copy h1{font-size:36px}.profile-grid{grid-template-columns:repeat(2,1fr)}}
+
+.stats-board{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.stats-board>div{border:1px solid var(--line);border-radius:14px;background:#fff;padding:18px}
+.stats-board span{display:block;color:#7b8881;font-size:11px;text-transform:uppercase;margin-bottom:7px}
+.stats-board strong{font-size:22px}
+.stats-empty{grid-column:1/-1;color:#65736b;padding:22px;text-align:center}
+.stats-note{font-size:11px;color:#7b8881;margin-top:10px}
+.career-board{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.career-step{background:#10271b;border:1px solid #31503e;border-radius:14px;padding:20px;color:#e2ebe5}
+.career-step b{display:block;color:#71e39b;font-size:12px;margin-bottom:10px}.career-step span{font-weight:800}
+@media(max-width:800px){.stats-board{grid-template-columns:repeat(2,1fr)}.career-board{grid-template-columns:repeat(2,1fr)}}
