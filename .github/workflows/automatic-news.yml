@@ -1,0 +1,102 @@
+name: Actualités automatiques Kairo Sport
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+      timezone: "Africa/Bangui"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Récupérer le site
+        uses: actions/checkout@v6
+
+      - name: Mettre à jour les actualités football
+        env:
+          RSS_URL: https://www.footmercato.net/flux-rss
+        run: |
+          python3 - <<'PY'
+          import json, re
+          import urllib.request
+          import xml.etree.ElementTree as ET
+          from datetime import datetime, timezone
+          from email.utils import parsedate_to_datetime
+          
+          url = "https://www.footmercato.net/flux-rss"
+          req = urllib.request.Request(
+              url,
+              headers={"User-Agent": "KairoSport-NewsBot/1.0 (+https://kairomelchior-star.github.io/KAIRO-SPORT/)"}
+          )
+          with urllib.request.urlopen(req, timeout=30) as response:
+              xml = response.read()
+          
+          root = ET.fromstring(xml)
+          items = []
+          
+          for item in root.findall(".//item")[:20]:
+              title = (item.findtext("title") or "").strip()
+              link = (item.findtext("link") or "").strip()
+              description = re.sub(r"<[^>]+>", " ", item.findtext("description") or "")
+              description = re.sub(r"\\s+", " ", description).strip()
+              pub = (item.findtext("pubDate") or "").strip()
+              
+              if not title or not link:
+                  continue
+              
+              try:
+                  published = parsedate_to_datetime(pub).astimezone(timezone.utc).isoformat()
+              except Exception:
+                  published = datetime.now(timezone.utc).isoformat()
+              
+              items.append({
+                  "title": title,
+                  "link": link,
+                  "description": description[:300],
+                  "source": "Foot Mercato",
+                  "published": published,
+                  "title_fr": title,
+                  "description_fr": description[:300]
+              })
+          
+          items.sort(key=lambda x: x["published"], reverse=True)
+          
+          data = {
+              "updated_at": datetime.now(timezone.utc).isoformat(),
+              "items": items[:12]
+          }
+          
+          with open("data/news.json", "w", encoding="utf-8") as f:
+              json.dump(data, f, ensure_ascii=False, indent=2)
+          
+          print(f"{len(items[:12])} actualités récupérées.")
+          PY
+
+      - name: Préparer GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Créer l'artefact du site
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: "."
+
+      - name: Publier Kairo Sport
+        id: deployment
+        uses: actions/deploy-pages@v4
