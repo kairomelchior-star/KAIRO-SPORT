@@ -15,6 +15,8 @@
 <main>
 <section class="player-profile-hero"><div class="container" id="profile"></div></section>
 <section class="container section"><div class="profile-grid" id="details"></div></section>
+<section class="container section"><div class="section-head"><div><span class="eyebrow">STATISTIQUES</span><h2>Performances récentes</h2></div></div><div class="stats-board" id="stats"></div><p class="stats-note">Les statistiques sont liées à la saison affichée et peuvent être incomplètes selon les compétitions couvertes. Kairo Sport privilégie les données provenant de sources spécialisées ou officielles.</p></section>
+<section class="dark-section"><div class="container section"><div class="section-head light"><div><span class="eyebrow">CARRIÈRE</span><h2>Parcours et transferts</h2></div></div><div class="career-board" id="career"></div></div></section>
 <section class="dark-section"><div class="container section"><div class="section-head light"><div><span class="eyebrow">KAIRO SPORT</span><h2>Suivi du marché</h2></div></div><div class="transfer-process"><div><b>01</b><h3>Valeur</h3><p>Estimation indicative, distincte du prix réel d'un transfert.</p></div><div><b>02</b><h3>Statut</h3><p>Contrat, joueur libre, prêt ou transfert confirmé selon les informations disponibles.</p></div><div><b>03</b><h3>Mouvement</h3><p>Club, championnat et opérations importantes autour du joueur.</p></div><div><b>04</b><h3>Actualités</h3><p>La fiche pourra être enrichie au fil des nouvelles informations.</p></div></div></div></section>
 </main>
 <footer><div class="container footer-grid"><div><a class="brand footer-brand" href="index.html"><span class="brand-mark">K</span><span>KAIRO<span class="brand-accent">SPORT</span></span></a><p>Toute l'actualité du football en Afrique et dans le monde.</p></div><div><h3>Mercato</h3><a href="transferts.html">Marché des transferts</a></div><div><h3>Sources photos</h3><p>Photos provenant de Wikimedia Commons ou de sites officiels lorsqu'une image réutilisable est disponible.</p></div></div><div class="copyright">© 2026 Kairo Sport. Tous droits réservés.</div></footer>
@@ -39,8 +41,22 @@ const players = {
 };
 const key = new URLSearchParams(location.search).get("player") || "lamine-yamal";
 const p = players[key] || players["lamine-yamal"];
+const stats = {
+"lamine-yamal": ["2025/26","28","16","11","2 262"],
+"erling-haaland": ["2025/26","35","27","8","2 953"],
+"kylian-mbappe": ["2025/26","31","25","5","2 599"]
+};
+const careers = {
+"lamine-yamal":["FC Barcelona","La Masia","Débuts professionnels : 2023"],
+"erling-haaland":["Manchester City","Borussia Dortmund","RB Salzburg","Molde"],
+"kylian-mbappe":["Real Madrid","Paris Saint-Germain","AS Monaco"]
+};
 document.title = "Kairo Sport | " + p.name;
 document.getElementById("profile").innerHTML = '<div class="player-profile-photo"><img src="'+p.img+'" alt="Photo de '+p.name+'"></div><div class="player-profile-copy"><span class="tag">FICHE JOUEUR</span><h1>'+p.name+'</h1><p>'+p.position+' · '+p.club+'</p><strong>'+p.value+'</strong><a class="photo-credit" href="'+p.source+'" target="_blank" rel="noopener">Voir la source de la photo →</a></div>';
+const s = stats[key];
+document.getElementById("stats").innerHTML = s ? '<div><span>Saison</span><strong>'+s[0]+'</strong></div><div><span>Matchs</span><strong>'+s[1]+'</strong></div><div><span>Buts</span><strong>'+s[2]+'</strong></div><div><span>Passes décisives</span><strong>'+s[3]+'</strong></div><div><span>Minutes</span><strong>'+s[4]+'</strong></div>' : '<div class="stats-empty">Statistiques détaillées en cours de mise à jour pour ce joueur.</div>';
+const career = careers[key] || [p.club];
+document.getElementById("career").innerHTML = career.map((x,i) => '<div class="career-step"><b>'+String(i+1).padStart(2,"0")+'</b><span>'+x+'</span></div>').join("");
 document.getElementById("details").innerHTML = '<div class="profile-card"><span>Pays</span><strong>'+p.country+'</strong></div><div class="profile-card"><span>Âge</span><strong>'+p.age+'</strong></div><div class="profile-card"><span>Poste</span><strong>'+p.position+'</strong></div><div class="profile-card"><span>Club / statut</span><strong>'+p.club+'</strong></div>';
 </script>
 </body>
