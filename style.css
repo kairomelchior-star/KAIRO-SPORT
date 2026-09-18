@@ -49,3 +49,24 @@ footer{background:#06100b;color:#c8d2cc;padding-top:50px}.footer-grid{display:gr
 .no-players{border:1px dashed #527061;border-radius:14px;padding:20px;text-align:center;color:#b9c6bf;margin-top:16px}
 .transfer-table-wrap{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:16px}
 .transfer-table{width:100%;border-collapse:collapse;min-width:700px}.transfer-table th,.transfer-table td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--line);font-size:13px}.transfer-table th{background:#eef5f0;color:#3e4d44;font-size:11px;text-transform:uppercase;letter-spacing:.5px}.transfer-table td:last-child{font-weight:900;color:var(--green)}.transfer-table tr:last-child td{border-bottom:0}.table-note{font-size:11px;color:#7b8881;margin:10px 0 0}
+
+.player-market-card{position:relative;display:flex;align-items:stretch;gap:14px;text-decoration:none;color:inherit;overflow:hidden;cursor:pointer}
+.player-market-card:hover{transform:translateY(-3px);border-color:#4d8063}
+.photo-avatar{position:relative;flex:0 0 86px;width:86px;height:112px;border-radius:12px;overflow:hidden;background:#183524;display:flex;align-items:center;justify-content:center}
+.player-photo{width:100%;height:100%;object-fit:cover;display:block}
+.player-avatar-fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:24px;color:#71e39b;background:#183524}
+.player-photo:not([src=""])+.player-avatar-fallback{display:none}
+.photo-license-note{font-size:11px;color:#8fa197;margin:12px 0 0}
+.player-profile-hero{background:#07150e;padding:55px 0;color:#fff}
+.player-profile-hero .container{display:grid;grid-template-columns:260px 1fr;gap:32px;align-items:center}
+.player-profile-photo{height:330px;border-radius:20px;overflow:hidden;background:#183524;border:1px solid #31503e}
+.player-profile-photo img{width:100%;height:100%;object-fit:cover}
+.player-profile-copy h1{font-size:48px;margin:10px 0}
+.player-profile-copy p{color:#b8c7bf;font-size:18px}
+.player-profile-copy>strong{display:block;color:#71e39b;font-size:32px;margin:18px 0}
+.photo-credit{display:inline-block;color:#cfe8d9;font-size:12px}
+.profile-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.profile-card{border:1px solid var(--line);border-radius:14px;padding:20px;background:#fff}
+.profile-card span{display:block;color:#7b8881;font-size:11px;text-transform:uppercase;margin-bottom:7px}
+.profile-card strong{font-size:18px}
+@media(max-width:700px){.player-profile-hero .container{grid-template-columns:1fr}.player-profile-photo{height:300px}.player-profile-copy h1{font-size:36px}.profile-grid{grid-template-columns:repeat(2,1fr)}}
