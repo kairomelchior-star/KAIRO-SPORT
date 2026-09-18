@@ -6,6 +6,7 @@ from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 from html import unescape
 from pathlib import Path
+from deep_translator import GoogleTranslator
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "news.json"
@@ -17,10 +18,23 @@ FEEDS = [
     ("Google News – Afrique", "https://news.google.com/rss/search?q=football%20Afrique&hl=fr&gl=FR&ceid=FR:fr"),
 ]
 
+translator = GoogleTranslator(source="auto", target="fr")
+
 def clean(text):
     text = unescape(text or "")
     text = re.sub(r"<[^>]+>", " ", text)
-    return re.sub(r"\\s+", " ", text).strip()
+    return re.sub(r"\s+", " ", text).strip()
+
+def translate_fr(text, max_chars=None):
+    text = clean(text)
+    if not text:
+        return ""
+    try:
+        translated = translator.translate(text)
+        return translated[:max_chars] if max_chars else translated
+    except Exception as exc:
+        print(f"Traduction indisponible: {exc}")
+        return text[:max_chars] if max_chars else text
 
 def parse_date(value):
     if not value:
@@ -55,10 +69,13 @@ for source, url in FEEDS:
             if not title or not link or link in seen:
                 continue
             seen.add(link)
+            print(f"Traduction: {title}")
             items.append({
                 "title": title,
+                "title_fr": translate_fr(title),
                 "link": link,
                 "description": description[:220],
+                "description_fr": translate_fr(description, 220),
                 "source": source,
                 "published": pub_date
             })
