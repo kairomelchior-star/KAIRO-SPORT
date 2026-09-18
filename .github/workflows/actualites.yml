@@ -16,6 +16,9 @@ jobs:
       - name: Récupérer le site
         uses: actions/checkout@v4
 
+      - name: Installer le traducteur
+        run: pip install --disable-pip-version-check deep-translator
+
       - name: Mettre à jour les actualités
         run: python scripts/update_news.py
 
