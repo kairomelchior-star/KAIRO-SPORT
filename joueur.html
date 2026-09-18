@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Fiche joueur Kairo Sport — marché des transferts.">
+<title>Kairo Sport | Joueur</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header"><div class="container header-inner">
+<a class="brand" href="index.html" aria-label="Kairo Sport accueil"><span class="brand-mark">K</span><span>KAIRO<span class="brand-accent">SPORT</span></span></a>
+<a class="europe-back" href="transferts.html">← Marché des transferts</a>
+</div></header>
+<main>
+<section class="player-profile-hero"><div class="container" id="profile"></div></section>
+<section class="container section"><div class="profile-grid" id="details"></div></section>
+<section class="dark-section"><div class="container section"><div class="section-head light"><div><span class="eyebrow">KAIRO SPORT</span><h2>Suivi du marché</h2></div></div><div class="transfer-process"><div><b>01</b><h3>Valeur</h3><p>Estimation indicative, distincte du prix réel d'un transfert.</p></div><div><b>02</b><h3>Statut</h3><p>Contrat, joueur libre, prêt ou transfert confirmé selon les informations disponibles.</p></div><div><b>03</b><h3>Mouvement</h3><p>Club, championnat et opérations importantes autour du joueur.</p></div><div><b>04</b><h3>Actualités</h3><p>La fiche pourra être enrichie au fil des nouvelles informations.</p></div></div></div></section>
+</main>
+<footer><div class="container footer-grid"><div><a class="brand footer-brand" href="index.html"><span class="brand-mark">K</span><span>KAIRO<span class="brand-accent">SPORT</span></span></a><p>Toute l'actualité du football en Afrique et dans le monde.</p></div><div><h3>Mercato</h3><a href="transferts.html">Marché des transferts</a></div><div><h3>Sources photos</h3><p>Photos provenant de Wikimedia Commons ou de sites officiels lorsqu'une image réutilisable est disponible.</p></div></div><div class="copyright">© 2026 Kairo Sport. Tous droits réservés.</div></footer>
+<script>
+const players = {
+"lamine-yamal": {name:"Lamine Yamal", country:"Espagne", club:"FC Barcelona", position:"Ailier", value:"220 M€", age:"19 ans", img:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Lamine_Yamal_in_2025_(cropped).jpg", source:"https://commons.wikimedia.org/wiki/File:Lamine_Yamal_in_2025_(cropped).jpg"},
+"erling-haaland": {name:"Erling Haaland", country:"Norvège", club:"Manchester City", position:"Attaquant", value:"220 M€", age:"26 ans", img:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Erling_Haaland_June_2025.jpg", source:"https://commons.wikimedia.org/wiki/File:Erling_Haaland_June_2025.jpg"},
+"kylian-mbappe": {name:"Kylian Mbappé", country:"France", club:"Real Madrid", position:"Attaquant", value:"200 M€", age:"27 ans", img:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Kylian_Mbappe_France_v_Morocco_9_July_2026-148.jpg", source:"https://commons.wikimedia.org/wiki/File:Kylian_Mbappe_France_v_Morocco_9_July_2026-148.jpg"},
+"michael-olise": {name:"Michael Olise", country:"France", club:"Bayern Munich", position:"Ailier", value:"170 M€", age:"24 ans", img:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Michael_Olise_France_v_Morocco_9_July_2026-198.jpg", source:"https://commons.wikimedia.org/wiki/File:Michael_Olise_France_v_Morocco_9_July_2026-198.jpg"},
+"jude-bellingham": {name:"Jude Bellingham", country:"Angleterre", club:"Real Madrid", position:"Milieu", value:"160 M€", age:"23 ans", img:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Jude_Bellingham_England_v_Ghana_23_June_2026-061_(cropped).jpg", source:"https://commons.wikimedia.org/wiki/File:Jude_Bellingham_England_v_Ghana_23_June_2026-061_(cropped).jpg"},
+"pedri": {name:"Pedri", country:"Espagne", club:"FC Barcelona", position:"Milieu", value:"150 M€", age:"23 ans", img:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Pedri.jpg", source:"https://commons.wikimedia.org/wiki/File:Pedri.jpg"},
+"vinicius-junior": {name:"Vinícius Júnior", country:"Brésil", club:"Real Madrid", position:"Ailier", value:"140 M€", age:"26 ans", img:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Vinicius_Junior_(2025).jpg", source:"https://commons.wikimedia.org/wiki/File:Vinicius_Junior_(2025).jpg"},
+"vitinha": {name:"Vitinha", country:"Portugal", club:"Paris Saint-Germain", position:"Milieu", value:"140 M€", age:"26 ans", img:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Vitinha.jpg", source:"https://commons.wikimedia.org/wiki/File:Vitinha.jpg"},
+"joao-neves": {name:"João Neves", country:"Portugal", club:"Paris Saint-Germain", position:"Milieu", value:"140 M€", age:"21 ans", img:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Portugal_national_football_team_0866_(João_Neves).jpg", source:"https://commons.wikimedia.org/wiki/File:Portugal_national_football_team_0866_(João_Neves).jpg"},
+"khvicha-kvaratskhelia": {name:"Khvicha Kvaratskhelia", country:"Géorgie", club:"Paris Saint-Germain", position:"Ailier", value:"140 M€", age:"25 ans", img:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Khvicha_Kvaratskhelia_cropped.jpg", source:"https://commons.wikimedia.org/wiki/File:Khvicha_Kvaratskhelia_cropped.jpg"},
+"julian-alvarez": {name:"Julián Alvarez", country:"Argentine", club:"Atlético de Madrid", position:"Attaquant", value:"120 M€", age:"26 ans", img:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Julian_Alvarez_Argentina_v_Spain_19_July_2026-146.jpg", source:"https://commons.wikimedia.org/wiki/File:Julian_Alvarez_Argentina_v_Spain_19_July_2026-146.jpg"},
+"declan-rice": {name:"Declan Rice", country:"Angleterre", club:"Arsenal", position:"Milieu", value:"120 M€", age:"27 ans", img:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Declan_Rice_England_v_Ghana_23_June_2026-143.jpg", source:"https://commons.wikimedia.org/wiki/File:Declan_Rice_England_v_Ghana_23_June_2026-143.jpg"},
+"teboho-mokoena": {name:"Teboho Mokoena", country:"Afrique du Sud", club:"Mamelodi Sundowns", position:"Milieu", value:"À suivre", age:"29 ans", img:"https://sundownsfc.co.za/wp-content/uploads/2023/12/Mokoena.jpg", source:"https://sundownsfc.co.za/player/teboho-mokoena/"},
+"jadon-sancho": {name:"Jadon Sancho", country:"Angleterre", club:"Joueur libre", position:"Ailier", value:"LIBRE", age:"26 ans", img:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Jadon_Sancho_20042025_(1).jpg", source:"https://commons.wikimedia.org/wiki/File:Jadon_Sancho_20042025_(1).jpg"},
+"casemiro": {name:"Casemiro", country:"Brésil", club:"Joueur libre", position:"Milieu", value:"LIBRE", age:"34 ans", img:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Casemiro_Brazil_V_Morocco_13_June_2026-76_(cropped).jpg", source:"https://commons.wikimedia.org/wiki/File:Casemiro_Brazil_V_Morocco_13_June_2026-76_(cropped).jpg"},
+"bernardo-silva": {name:"Bernardo Silva", country:"Portugal", club:"Joueur libre", position:"Milieu", value:"LIBRE", age:"32 ans", img:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Bernardo_Silva.jpg", source:"https://commons.wikimedia.org/wiki/File:Bernardo_Silva.jpg"}
+};
+const key = new URLSearchParams(location.search).get("player") || "lamine-yamal";
+const p = players[key] || players["lamine-yamal"];
+document.title = "Kairo Sport | " + p.name;
+document.getElementById("profile").innerHTML = '<div class="player-profile-photo"><img src="'+p.img+'" alt="Photo de '+p.name+'"></div><div class="player-profile-copy"><span class="tag">FICHE JOUEUR</span><h1>'+p.name+'</h1><p>'+p.position+' · '+p.club+'</p><strong>'+p.value+'</strong><a class="photo-credit" href="'+p.source+'" target="_blank" rel="noopener">Voir la source de la photo →</a></div>';
+document.getElementById("details").innerHTML = '<div class="profile-card"><span>Pays</span><strong>'+p.country+'</strong></div><div class="profile-card"><span>Âge</span><strong>'+p.age+'</strong></div><div class="profile-card"><span>Poste</span><strong>'+p.position+'</strong></div><div class="profile-card"><span>Club / statut</span><strong>'+p.club+'</strong></div>';
+</script>
+</body>
+</html>
