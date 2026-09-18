@@ -3,6 +3,7 @@ import re
 import urllib.request
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
+import time
 from email.utils import parsedate_to_datetime
 from html import unescape
 from pathlib import Path
@@ -29,12 +30,22 @@ def translate_fr(text, max_chars=None):
     text = clean(text)
     if not text:
         return ""
-    try:
-        translated = translator.translate(text)
-        return translated[:max_chars] if max_chars else translated
-    except Exception as exc:
-        print(f"Traduction indisponible: {exc}")
-        return text[:max_chars] if max_chars else text
+
+    if max_chars:
+        text = text[:max_chars]
+
+    for attempt in range(3):
+        try:
+            translated = translator.translate(text)
+            time.sleep(1)
+            return translated
+        except Exception as exc:
+            print("Traduction échouée (tentative {}/3): {}".format(attempt + 1, exc))
+            time.sleep(3)
+
+    print("Traduction indisponible : texte original conservé.")
+    return text
+
 
 def parse_date(value):
     if not value:
@@ -69,13 +80,10 @@ for source, url in FEEDS:
             if not title or not link or link in seen:
                 continue
             seen.add(link)
-            print(f"Traduction: {title}")
             items.append({
                 "title": title,
-                "title_fr": translate_fr(title),
                 "link": link,
                 "description": description[:220],
-                "description_fr": translate_fr(description, 220),
                 "source": source,
                 "published": pub_date
             })
@@ -84,6 +92,11 @@ for source, url in FEEDS:
 
 items.sort(key=lambda x: x["published"], reverse=True)
 items = items[:12]
+
+for item in items:
+    print("Traduction: {}".format(item["title"]))
+    item["title_fr"] = translate_fr(item["title"])
+    item["description_fr"] = translate_fr(item["description"], 220)
 
 payload = {
     "updated_at": datetime.now(timezone.utc).isoformat(),
