@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kairomelchior-star.github.io/KAIRO-SPORT/sitemap.xml
