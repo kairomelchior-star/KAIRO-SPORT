@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kairo Sport — Toute l'actualité du football en Afrique et dans le monde.">
+  <title>Kairo Sport | Football Afrique & Monde</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#accueil" aria-label="Kairo Sport accueil">
+        <span class="brand-mark">K</span>
+        <span>KAIRO<span class="brand-accent">SPORT</span></span>
+      </a>
+      <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+      <nav class="nav" id="nav">
+        <a class="active" href="#accueil">Accueil</a>
+        <a href="#afrique">Afrique</a>
+        <a href="#monde">Monde</a>
+        <a href="#transferts">Transferts</a>
+        <a href="#resultats">Résultats</a>
+        <a href="#apropos">À propos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="accueil">
+    <section class="breaking">
+      <div class="container breaking-inner">
+        <strong>À LA UNE</strong>
+        <span>Les dernières informations du football africain et international</span>
+      </div>
+    </section>
+
+    <section class="hero container">
+      <article class="hero-card">
+        <div class="hero-image"></div>
+        <div class="hero-content">
+          <span class="tag">FOOTBALL AFRICAIN</span>
+          <h1>L'actualité du football africain, au cœur du jeu</h1>
+          <p>Analyses, résultats, transferts et histoires des joueurs et clubs qui font vibrer l'Afrique.</p>
+          <a class="btn" href="#articles">Lire les dernières infos →</a>
+        </div>
+      </article>
+      <aside class="hero-side">
+        <article class="mini-card">
+          <div class="mini-image image-2"></div>
+          <div><span class="tag">MONDE</span><h2>Les grands rendez-vous du football mondial</h2></div>
+        </article>
+        <article class="mini-card">
+          <div class="mini-image image-3"></div>
+          <div><span class="tag">TRANSFERTS</span><h2>Le mercato et ses mouvements à suivre</h2></div>
+        </article>
+      </aside>
+    </section>
+
+    <section class="container section" id="articles">
+      <div class="section-head">
+        <div><span class="eyebrow">KAIRO SPORT</span><h2>Dernières actualités</h2></div>
+        <a href="#articles">Voir tout →</a>
+      </div>
+      <div class="news-grid">
+        <article class="news-card">
+          <div class="news-image image-4"></div>
+          <div class="news-body"><span class="tag">AFRIQUE</span><h3>Les talents africains qui attirent les regards</h3><p>Découvrez les joueurs à suivre dans les compétitions nationales et internationales.</p><small>Il y a quelques minutes</small></div>
+        </article>
+        <article class="news-card">
+          <div class="news-image image-5"></div>
+          <div class="news-body"><span class="tag">ANALYSE</span><h3>Pourquoi le football africain continue de progresser</h3><p>Une lecture des tendances, des clubs et des générations montantes.</p><small>Aujourd'hui</small></div>
+        </article>
+        <article class="news-card">
+          <div class="news-image image-6"></div>
+          <div class="news-body"><span class="tag">INTERNATIONAL</span><h3>Les affiches à ne pas manquer cette semaine</h3><p>Calendrier, enjeux et moments forts à surveiller.</p><small>Aujourd'hui</small></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="dark-section" id="afrique">
+      <div class="container section">
+        <div class="section-head light"><div><span class="eyebrow">FOOTBALL AFRICAIN</span><h2>Afrique au premier plan</h2></div><a href="#afrique">Toutes les infos →</a></div>
+        <div class="feature-row">
+          <article class="feature-card"><div class="feature-image image-7"></div><div><span class="tag">CAF</span><h3>Les compétitions africaines au centre de l'attention</h3><p>Suivez les clubs, les sélections et les grandes échéances du continent.</p></div></article>
+          <div class="stat-panel">
+            <div><strong>54</strong><span>Pays africains</span></div>
+            <div><strong>⚽</strong><span>Une passion commune</span></div>
+            <div><strong>24/7</strong><span>Actualité Kairo Sport</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section" id="monde">
+      <div class="section-head"><div><span class="eyebrow">FOOTBALL MONDIAL</span><h2>Le monde du football</h2></div><a href="#monde">Explorer →</a></div>
+      <div class="world-grid">
+        <article class="world-card image-8"><div><span class="tag">EUROPE</span><h3>Les grandes compétitions européennes</h3></div></article>
+        <article class="world-card image-9"><div><span class="tag">STARS</span><h3>Les joueurs qui marquent leur époque</h3></div></article>
+      </div>
+    </section>
+
+    <section class="container section" id="transferts">
+      <div class="newsletter">
+        <div><span class="eyebrow">KAIRO SPORT</span><h2>Ne rate aucune actualité</h2><p>Les informations football directement dans ta boîte mail.</p></div>
+        <form onsubmit="subscribe(event)"><input type="email" placeholder="Ton adresse e-mail" required><button type="submit">S'abonner</button></form>
+      </div>
+    </section>
+  </main>
+
+  <footer id="apropos">
+    <div class="container footer-grid">
+      <div><a class="brand footer-brand" href="#accueil"><span class="brand-mark">K</span><span>KAIRO<span class="brand-accent">SPORT</span></span></a><p>Toute l'actualité du football en Afrique et dans le monde.</p></div>
+      <div><h3>Navigation</h3><a href="#afrique">Afrique</a><a href="#monde">Monde</a><a href="#transferts">Transferts</a></div>
+      <div><h3>Suivez Kairo Sport</h3><p>Les grandes histoires du football, une passion à la fois.</p></div>
+    </div>
+    <div class="copyright">© <span id="year"></span> Kairo Sport. Tous droits réservés.</div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
