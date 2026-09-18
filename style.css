@@ -41,3 +41,11 @@ footer{background:#06100b;color:#c8d2cc;padding-top:50px}.footer-grid{display:gr
 .market-note{margin-top:18px;color:#8fa197;font-size:11px}
 @media(max-width:900px){.player-market-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:520px){.player-market-grid{grid-template-columns:1fr}.player-market-card{padding:14px}}
+
+.market-tabs{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0 14px}
+.market-tab{border:1px solid #31503e;background:#10271b;color:#d7e4dc;border-radius:999px;padding:10px 14px;font-weight:800;font-size:12px;cursor:pointer}
+.market-tab:hover,.market-tab.active{background:var(--green);border-color:var(--green);color:#fff}
+.market-search{margin:0 0 18px}.market-search input{width:100%;padding:14px 16px;border-radius:10px;border:1px solid #31503e;background:#0d1d15;color:#fff;font-size:14px;outline:none}.market-search input::placeholder{color:#8fa197}
+.no-players{border:1px dashed #527061;border-radius:14px;padding:20px;text-align:center;color:#b9c6bf;margin-top:16px}
+.transfer-table-wrap{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:16px}
+.transfer-table{width:100%;border-collapse:collapse;min-width:700px}.transfer-table th,.transfer-table td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--line);font-size:13px}.transfer-table th{background:#eef5f0;color:#3e4d44;font-size:11px;text-transform:uppercase;letter-spacing:.5px}.transfer-table td:last-child{font-weight:900;color:var(--green)}.transfer-table tr:last-child td{border-bottom:0}.table-note{font-size:11px;color:#7b8881;margin:10px 0 0}
