@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>TITRE DE L'ARTICLE | Kairo Sport</title>
+
+  <link rel="stylesheet" href="../style.css">
+
+  <style>
+    .article-page {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 50px 0 80px;
+    }
+
+    .article-category {
+      color: #0b8f45;
+      font-weight: 900;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+    }
+
+    .article-page h1 {
+      font-size: clamp(36px, 6vw, 58px);
+      line-height: 1.05;
+      margin: 12px 0 18px;
+    }
+
+    .article-intro {
+      font-size: 20px;
+      color: #5f6963;
+      line-height: 1.6;
+    }
+
+    .article-meta {
+      color: #7a847e;
+      font-size: 13px;
+      margin: 20px 0 30px;
+    }
+
+    .article-cover {
+      width: 100%;
+      border-radius: 18px;
+      margin: 10px 0 35px;
+      display: block;
+    }
+
+    .article-content {
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .article-content h2 {
+      font-size: 30px;
+      margin-top: 40px;
+      line-height: 1.2;
+    }
+
+    .article-content p {
+      margin: 18px 0;
+    }
+
+    .article-source {
+      margin-top: 45px;
+      padding: 20px;
+      background: #f0f5f1;
+      border-left: 4px solid #0b8f45;
+      font-size: 14px;
+    }
+
+    .back-home {
+      display: inline-block;
+      margin-bottom: 30px;
+      color: #0b8f45;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      .article-page {
+        width: 92%;
+        padding: 35px 0 60px;
+      }
+
+      .article-content {
+        font-size: 17px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">K</span>
+      <span>KAIRO<span class="brand-accent">SPORT</span></span>
+    </a>
+
+    <button class="menu-toggle" aria-label="Ouvrir le menu">
+      ☰
+    </button>
+
+    <nav class="nav">
+      <a href="../index.html">Accueil</a>
+      <a href="../index.html#afrique">Afrique</a>
+      <a href="../index.html#monde">Monde</a>
+      <a href="../index.html#transferts">Transferts</a>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+
+  <article class="article-page">
+
+    <a class="back-home" href="../index.html">
+      ← Retour à Kairo Sport
+    </a>
+
+    <span class="article-category">
+      CATÉGORIE
+    </span>
+
+    <h1>
+      TITRE DE L'ARTICLE
+    </h1>
+
+    <p class="article-intro">
+      INTRODUCTION DE L'ARTICLE
+    </p>
+
+    <div class="article-meta">
+      Par Kairo Sport • DATE • Temps de lecture : 3 min
+    </div>
+
+    <img
+      class="article-cover"
+      src="../images/image-article.jpg"
+      alt="Image de l'article"
+    >
+
+    <div class="article-content">
+
+      <p>
+        PREMIER PARAGRAPHE DE L'ARTICLE.
+      </p>
+
+      <h2>
+        PREMIER SOUS-TITRE
+      </h2>
+
+      <p>
+        CONTENU DE L'ARTICLE.
+      </p>
+
+      <p>
+        SUITE DE L'ARTICLE.
+      </p>
+
+      <h2>
+        DEUXIÈME SOUS-TITRE
+      </h2>
+
+      <p>
+        CONTENU DE L'ARTICLE.
+      </p>
+
+    </div>
+
+    <div class="article-source">
+      <strong>Sources :</strong> Kairo Sport et sources officielles.
+    </div>
+
+  </article>
+
+</main>
+
+<footer>
+  <div class="container footer-grid">
+
+    <div>
+      <a class="brand footer-brand" href="../index.html">
+        <span class="brand-mark">K</span>
+        <span>KAIRO<span class="brand-accent">SPORT</span></span>
+      </a>
+
+      <p>
+        Toute l'actualité du football en Afrique et dans le monde.
+      </p>
+    </div>
+
+    <div>
+      <h3>Navigation</h3>
+      <a href="../index.html#afrique">Afrique</a>
+      <a href="../index.html#monde">Monde</a>
+      <a href="../index.html#transferts">Transferts</a>
+    </div>
+
+  </div>
+
+  <div class="copyright">
+    © <span id="year"></span> Kairo Sport. Tous droits réservés.
+  </div>
+</footer>
+
+<script src="../script.js"></script>
+
+</body>
+  </html>
